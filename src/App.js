@@ -8,7 +8,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      color: color[0],
+      color: colors[0],
       changeColor: this.changeColor
     }
     this.changeColor = this.changeColor.bind(this)
