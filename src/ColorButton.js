@@ -5,7 +5,7 @@ import { RootContext } from './RootContext';
 export const ColorButton = props => (
   <RootContext.Consumer>
     {
-      ({color, changeColor}) => (
+      ({changeColor}) => (
         <button onClick={changeColor}>CHANGE THE COLOR</button>
       )
     }

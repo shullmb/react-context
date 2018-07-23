@@ -5,7 +5,7 @@ import { RootContext } from './RootContext';
 export const ColorPane = props => (
   <RootContext.Consumer>
     {
-      ({color, changeColor}) => {
+      ({color}) => {
         let style = {
           background: color,
           height: "200px", 
