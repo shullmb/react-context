@@ -1,7 +1,21 @@
 import React from 'react';
 import { RootContext } from './RootContext';
 
-// uses color from RootContext
+// uses color from RootContext as Consumer
 export const ColorPane = props => (
-  <p>Replace me too</p>
+  <RootContext.Consumer>
+    {
+      ({color, changeColor}) => {
+        let style = {
+          background: color,
+          height: "200px", 
+          width: "200px"
+        }
+        return (
+          <div style={style}></div>
+        )
+      }
+    }
+  </RootContext.Consumer>
+  
 )
