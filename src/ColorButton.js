@@ -1,6 +1,13 @@
 import React from 'react';
 import { RootContext } from './RootContext';
 
+// uses changeColor() from RootContext as Consumer
 export const ColorButton = props => (
-  <p>Replace me</p>
+  <RootContext.Consumer>
+    {
+      ({color, changeColor}) => (
+        <button onClick={changeColor}>CHANGE THE COLOR</button>
+      )
+    }
+  </RootContext.Consumer>
 )
