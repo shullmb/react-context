@@ -14,6 +14,15 @@ class App extends Component {
     this.changeColor = this.changeColor.bind(this)
   }
 
+  changeColor = () => {
+    var index = colors.indexOf(this.state.color)
+    index++
+    index = index > 4 ? 0 : index
+    this.setState({
+      color: colors[index]
+    })
+  }
+
   render() {
     return (
       <div className="App">
