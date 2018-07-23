@@ -1,8 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { RootContext, colors } from './RootContext';
+import { ControlPanel } from './ControlPanel';
+import { ColorShower } from './ColorShower';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      color: color[0],
+      changeColor: this.changeColor
+    }
+    this.changeColor = this.changeColor.bind(this)
+  }
+
   render() {
     return (
       <div className="App">
